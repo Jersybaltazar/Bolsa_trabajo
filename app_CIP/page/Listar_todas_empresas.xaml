@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.Listar_todas_empresas">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="EMPRENDIMIENTOS REGISTRADOS"
+                   FontSize="Title"
+                   HorizontalOptions="CenterAndExpand" />
+            <StackLayout Margin="20">
+                <SearchBar Placeholder="Buscar Emprendimiento" />
+            </StackLayout>
+            <ListView x:Name="lista_empren"
+                      HasUnevenRows="True"
+                      ItemSelected="lista_empren_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal"
+                                         Padding="10">
+                                <Label Text="{Binding razon_social}"
+                                       FontSize="24"
+                                       FontAttributes="Bold" />
+                                <StackLayout Margin="10,0,0,0">
+                                    <Image Source="{Binding ruta_imagen}"
+                                           WidthRequest="200"
+                                           HeightRequest="150" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

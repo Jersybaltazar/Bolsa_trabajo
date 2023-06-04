@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.registro_convenios">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="meter datos en el convenio"
+                   FontSize="Large" />
+            <Entry x:Name="entidad"
+                   Placeholder="entidad1" />
+            <Entry x:Name="direccion"
+                   Text="direccion1" />
+            <Entry x:Name="pagina"
+                   Text="pagina1" />
+            <Entry x:Name="firma"
+                   Text="firma1" />
+            <Entry x:Name="contacto"
+                   Text="1234567" />
+            <Button Text="Insertar"
+                    x:Name="button_registrar"
+                    Clicked="button_registrar_Clicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

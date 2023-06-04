@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.Listar_eventos_programados">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="EVENTOS PROGRAMADOS"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold"
+                   Margin="0,0,0,20" />
+            <ListView x:Name="eventosProgramadosListView"
+                      SelectionMode="None"
+                      HasUnevenRows="True"
+                      BackgroundColor="#00000000"
+                      Margin="20">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HasShadow="True"
+                                   BorderColor="Black"
+                                   CornerRadius="10"
+                                   Margin="0,0,0,10"
+                                   BackgroundColor="#FFFFFF">
+                                <StackLayout Spacing="5">
+                                    <Frame CornerRadius="10">
+                                        <Label Text="{Binding nombre_evento}" />
+                                    </Frame>
+                                    <Frame>
+                                        <Image Source="{Binding ruta_img}"
+                                               HeightRequest="100" />
+                                    </Frame>
+                                    <Frame>
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="MODALIDAD:" />
+                                                <Label Text="{Binding modalidad}" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Vertical">
+                                                <Label Text="Fecha:" />
+                                                <Label Text="{Binding fecha}" />
+                                                <Label Text="Hora:" />
+                                                <Label Text="{Binding hora}" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Vertical">
+                                                <Label Text="Direccion:" />
+                                                <Label Text="{Binding descripcion_modalidad}"
+                                                       TextColor="Blue">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="DescripcionLabel_Tapped" />
+                                                    </Label.GestureRecognizers>
+                                                </Label>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

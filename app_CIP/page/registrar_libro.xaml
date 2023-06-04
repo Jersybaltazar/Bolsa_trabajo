@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.registrar_libro">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"
+                           Text="COMPARTA UN DOCUMENTO"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           HorizontalOptions="CenterAndExpand" />
+                    <Entry x:Name="nombre"
+                           Grid.Row="1"
+                           Placeholder="NOMBRE DEL DOCUMENTO"
+                           Margin="20" />
+                    <Picker x:Name="tipo_documento"
+                            Grid.Row="2"
+                            Title="tipo"
+                            SelectedIndexChanged="tipo_SelectedIndexChanged_1">
+                        <Picker.ItemDisplayBinding>
+                            <Binding Path="tipo_documeto" />
+                        </Picker.ItemDisplayBinding>
+                    </Picker>
+                    <Entry x:Name="categoria"
+                           Grid.Row="3"
+                           Placeholder="CATEGORIA DEL DOCUMENTO"
+                           Margin="20" />
+                    <!--<Picker x:Name="categoria" Grid.Row="3" Title="Categoría" Margin="20">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>PRODUCCIÓN Y MANUFACTURA</x:String>
+                                <x:String>GESTIÓN DE RECURSOS HUMANOS</x:String>
+                                <x:String>GESTIÓN DE OPERACIONES</x:String>
+                                <x:String>AUDITORÍAS Y FISCALIZACIÓN</x:String>
+                                <x:String>GESTIÓN DEL MANTENIMIENTO</x:String>
+                                <x:String>ADMINISTRACIÓN PÚBLICA</x:String>
+                                <x:String>NORMAS LEGALES</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>-->
+                    <Entry x:Name="otros"
+                           Grid.Row="4"
+                           Placeholder="Otras Categorías"
+                           Margin="20" />
+                    <Entry x:Name="img_ruta"
+                           Grid.Row="5"
+                           Placeholder="URL-FUENTE"
+                           Margin="20" />
+                    <!-- Aquí puedes agregar el espacio para adjuntar la imagen de portada -->
+                    <Entry x:Name="descripcion"
+                           Grid.Row="6"
+                           Placeholder="DESCRIPCIÓN DEL DOCUMENTO"
+                           Margin="20"
+                           VerticalOptions="FillAndExpand" />
+                    <Label Grid.Row="7"
+                           Text="Política de privacidad de publicación"
+                           TextColor="MediumBlue"
+                           HorizontalOptions="CenterAndExpand" />
+                    <Button Grid.Row="8"
+                            Text="Insertar"
+                            x:Name="button_registrar"
+                            Clicked="button_registrar_Clicked"
+                            BackgroundColor="LimeGreen"
+                            TextColor="White"
+                            HorizontalOptions="CenterAndExpand"
+                            Margin="20" />
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

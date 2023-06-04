@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.Complejo_deportivo">
+    <ScrollView>
+        <StackLayout Margin="30">
+            <Label Text="COMPLEJO RECREACIONAL"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold"
+                   Margin="0,0,0,20" />
+            <ListView x:Name="alquilerListView"
+                      SelectionMode="None"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame>
+                                <StackLayout>
+                                    <Image Source="{Binding ruta_img}" />
+                                    
+                                    <StackLayout>
+                                        <Label Text="UBICACION:" />
+                                        <Label  Text="{Binding ubicacion}" />
+                                        <Label Text="{Binding descripcion}" />
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Image />
+                                        <Label Text="{Binding contacto1}" />
+                                        <ImageButton />
+                                    </StackLayout>
+                                    <Button Text="{Binding link}" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

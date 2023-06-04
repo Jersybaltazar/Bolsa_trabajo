@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.Listar_convenios">
+    <ScrollView>
+        <StackLayout Margin="30">
+            <Label Text="CONVENIOS"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold"
+                   Margin="0,0,0,20" />
+            <ListView x:Name="conveniosListView"
+                      SelectionMode="None"
+                      HasUnevenRows="True"
+                      BackgroundColor="#00000000">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HasShadow="True"
+                                   BorderColor="Black"
+                                   CornerRadius="10"
+                                   Margin="0,0,0,10"
+                                   BackgroundColor="#FFFFFF">
+                                <StackLayout Spacing="10">
+                                    <Label Text="ENTIDAD - INSTITUCION"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center" />
+                                    <Label Text="{Binding entidad}" />
+                                    <Label Text="DIRECCION"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center" />
+                                    <Label Text="{Binding direccion}" />
+                                    <Label Text="PAGINA WEB"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center" />
+                                    <Label Text="{Binding pagina }"
+                                           TextColor="Blue">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnLabelTapped" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label Text="FIRMA DE CONVENIO"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center" />
+                                    <Label Text="{Binding firma}" />
+                                    <Label Text="CONTACTO"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center" />
+                                    <Label Text="{Binding contacto}" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

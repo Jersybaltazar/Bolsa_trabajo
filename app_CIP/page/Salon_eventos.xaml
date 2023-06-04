@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.Salon_eventos">
+    <ScrollView Padding="10">
+        <StackLayout Margin="10">
+            <Label Text="ALQUILER DE SALON PARA EVENTOS"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="Medium"
+                   FontAttributes="Bold" />
+            <ListView x:Name="lista_alquileres"
+                      SelectionMode="None"
+                      HasUnevenRows="True"
+                      BackgroundColor="#00000000">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame>
+                                <StackLayout Spacing="10">
+                                    <Image Source="{Binding ruta_img}" />
+                                    <StackLayout Margin="0,10,0,15"
+                                                 HorizontalOptions="Center">
+                                        <Label Text="{Binding descripcion}" />
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Label Text="INFORMES Y RESERVACIÓN"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center"
+                                               FontSize="Medium" />
+                                        <StackLayout Orientation="Horizontal"
+                                                     HorizontalOptions="Center">
+                                            <ImageButton Source="phon.jpg"
+                                                         WidthRequest="40" />
+                                            <StackLayout Margin="20,0,20,0">
+                                                <Label Text="{Binding contacto1}"
+                                                       VerticalOptions="Center"
+                                                       HorizontalOptions="Center" />
+                                                <Label Text="{Binding contacto2}"
+                                                       VerticalOptions="Center"
+                                                       HorizontalOptions="Center" />
+                                                <Label x:Name="ruta" Text="{Binding link}" />
+                                            </StackLayout>
+                                            <ImageButton Source="watp2.jpg"
+                                                         WidthRequest="40"
+                                                         Clicked="OnWhatsAppButtonClicked" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <Button Text="CIP"
+                                            Clicked="OnCIPButtonClicked" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

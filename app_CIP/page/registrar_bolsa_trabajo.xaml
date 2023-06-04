@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.registrar_bolsa_trabajo">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Registrar Bolsa de Trabajo"
+                   HorizontalTextAlignment="Center"
+                   />
+            <Label Text="ID de usuario" />
+            <Entry x:Name="id_use" />
+            <Label Text="Descripción del trabajo" />
+            <Entry  x:Name="descripcion" Text="Ingrese la descripción de usuario" />
+            <Label Text="Contacto: " />
+            <Entry x:Name="contacto1" Placeholder="ingrese contacto 1" />
+            <Entry x:Name="contac2" Placeholder="ingrese contacto 2" />
+            <Button Text="Guardar"
+                    Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

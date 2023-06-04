@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.detalle_empresa">
+   
+        <StackLayout>
+            <ListView x:Name="lista_info"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Image  Source="{Binding ruta_imagen}"
+                                        VerticalOptions="CenterAndExpand"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Aspect="AspectFit"
+                                        WidthRequest="200"
+                                        HeightRequest="200" />
+                                <Frame BorderColor="Black"
+                                       CornerRadius="5"
+                                       Padding="10"
+                                       HorizontalOptions="Center">
+                                    <StackLayout Orientation="Horizontal"
+                                                 Spacing="10"
+                                                 HorizontalOptions="Center"
+                                                 VerticalOptions="Center">
+                                        <Label x:Name="name"
+                                               Text="{Binding razon_social}"
+                                               VerticalOptions="CenterAndExpand"
+                                               FontSize="Title"
+                                               FontAttributes="Bold" />
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BorderColor="Transparent"
+                                       BackgroundColor="Transparent"
+                                       CornerRadius="5"
+                                       Padding="10"
+                                       HasShadow="False"
+                                       HorizontalOptions="Center">
+                                    <StackLayout Orientation="Horizontal"
+                                                 Spacing="10"
+                                                 HorizontalOptions="Center"
+                                                 VerticalOptions="Center">
+                                        <Label  Text="Descripcion: "
+                                                VerticalOptions="CenterAndExpand"
+                                                FontSize="Subtitle"
+                                                FontAttributes="Bold" />
+                                        <Frame BorderColor="Black"
+                                               CornerRadius="5"
+                                               Padding="10">
+                                            <Label x:Name="descripcion"
+                                                   Text="{Binding descripcion}"
+                                                   VerticalOptions="CenterAndExpand"
+                                                   FontSize="Subtitle"
+                                                   FontAttributes="Bold" />
+                                        </Frame>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BorderColor="Transparent"
+                                       BackgroundColor="Transparent"
+                                       CornerRadius="5"
+                                       Padding="10"
+                                       HasShadow="False"
+                                       HorizontalOptions="Center">
+                                    <StackLayout Orientation="Horizontal"
+                                                 Spacing="10"
+                                                 HorizontalOptions="Center"
+                                                 VerticalOptions="Center">
+                                        <Label  Text="Precio: "
+                                                VerticalOptions="CenterAndExpand"
+                                                FontSize="Subtitle"
+                                                FontAttributes="Bold" />
+                                        <Frame BorderColor="Black"
+                                               CornerRadius="5"
+                                               Padding="10">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label x:Name="experiencia"
+                                                       Text="{Binding experiencia}"
+                                                       VerticalOptions="CenterAndExpand"
+                                                       FontSize="Subtitle"
+                                                       FontAttributes="Bold" />
+                                                <Label  Text="Soles"
+                                                        VerticalOptions="CenterAndExpand"
+                                                        FontSize="Subtitle"
+                                                        FontAttributes="Bold" />
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BorderColor="Transparent"
+                                       BackgroundColor="Transparent"
+                                       CornerRadius="5"
+                                       Padding="10"
+                                       HasShadow="False"
+                                       HorizontalOptions="Center">
+                                    <StackLayout Orientation="Horizontal"
+                                                 Spacing="10"
+                                                 HorizontalOptions="Center"
+                                                 VerticalOptions="Center">
+                                        <Label  Text="Descuento: "
+                                                VerticalOptions="CenterAndExpand"
+                                                FontSize="Subtitle"
+                                                FontAttributes="Bold" />
+                                        <Frame BorderColor="Black"
+                                               CornerRadius="5"
+                                               Padding="10">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label x:Name="descuento"
+                                                       Text="{Binding descuento}"
+                                                       VerticalOptions="CenterAndExpand"
+                                                       FontSize="Subtitle"
+                                                       FontAttributes="Bold" />
+                                                <Label  Text="Soles"
+                                                        VerticalOptions="CenterAndExpand"
+                                                        FontSize="Subtitle"
+                                                        FontAttributes="Bold" />
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BorderColor="Transparent"
+                                       BackgroundColor="Transparent"
+                                       CornerRadius="5"
+                                       Padding="10"
+                                       HasShadow="False"
+                                       HorizontalOptions="Center">
+                                    <StackLayout Orientation="Horizontal"
+                                                 Spacing="10"
+                                                 HorizontalOptions="Center"
+                                                 VerticalOptions="Center">
+                                        <Label  Text="Delivery: "
+                                                VerticalOptions="CenterAndExpand"
+                                                FontSize="Subtitle"
+                                                FontAttributes="Bold" />
+                                        <Frame BorderColor="Black"
+                                               CornerRadius="5"
+                                               Padding="10">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label x:Name="delivery"
+                                                       Text="{Binding delivery}"
+                                                       VerticalOptions="CenterAndExpand"
+                                                       FontSize="Subtitle"
+                                                       FontAttributes="Bold" />
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    
+</ContentPage>

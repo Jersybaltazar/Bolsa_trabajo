@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.convenedor_cip_huanuco">
+    <ScrollView>
+        <StackLayout Margin="20"
+                     Spacing="20">
+            <Label Text="CIP CONSEJO DEPARTAMENTAL HUÁNUCO"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Large"
+                   TextColor="Black"/>
+            <Label Text="ALQUILERES" />
+            <ImageButton Source="complejo_deportivo.jpg"
+                         WidthRequest="250"
+                         HorizontalOptions="Center" 
+                         Clicked="ImageButton_Clicked"/>
+            <ImageButton Source="salon_eventos.png"
+                         WidthRequest="250"
+                         HorizontalOptions="Center" 
+                         Clicked="ImageButton_Clicked_1"/>
+            <Label Text="CONTACTO ADMINISTRATIVO" />
+            <ImageButton Source="secretaria.jpg"
+                         WidthRequest="250"
+                         HorizontalOptions="Center"
+                         Clicked="ImageButton_Clicked_2"/>
+            <Label Text="CONVENIO" />
+            <ImageButton Source="convenio.jpg"
+                         WidthRequest="250"
+                         HorizontalOptions="Center"
+                         Clicked="ImageButton_Clicked_3"/>
+            <Label Text="DOCUMENTO NORMATIVO Y RESOLUCIONES" />
+            <Button Text="DOCUMENTOS NORMATIVOS"
+                    HorizontalOptions="Center" />
+            <Button Text="RESOLUCIONES"
+                    HorizontalOptions="Center" />
+            <Label Text="TRAMITES" />
+            <Button Text="CERTIFICADO DE HABILIDAD"
+                    HorizontalOptions="Center"
+                    Padding="10,-1,10,-1" />
+            <Button Text="DUPLICADO DE CARNET"
+                    HorizontalOptions="Center"
+                    Padding="10,-1,10,-1" />
+            <Button Text="CAMBIO DE SEDE"
+                    HorizontalOptions="Center"
+                    Padding="10,-1,10,-1" />
+            <Button Text="EXONERACIÓN DE CUOTA"
+                    HorizontalOptions="Center"
+                    Padding="10,-1,10,-1" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

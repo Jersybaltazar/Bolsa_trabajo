@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.Cip_virtual">
+    <ScrollView>
+        <Grid VerticalOptions="Center"
+              HorizontalOptions="Center">
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Spacing="40">
+                <Label Text="CIP VIRTUAL"
+                       HorizontalOptions="Center"
+                       FontSize="Large"
+                       TextColor="Black" />
+                <Button Text="Crear Cuenta CIP Virtual" />
+                <Button Text="Ingresar a CIP Virtual" />
+                <Button Text="Servicios Sociales CIP" />
+                <Button Text=" Convenios Institucionales" />
+                <Button Text="Pronunciamiento" />
+                <Button Text="Documentos Normativos" />
+                <Button Text="Revista de Ingenieria Nacional" />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

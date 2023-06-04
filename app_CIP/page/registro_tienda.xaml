@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.registro_tienda">
+    <ScrollView>
+        <StackLayout>
+            <!--<Grid>-->
+            <!--<Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>-->
+            <Label Grid.Row="0"
+                   Text="REGISTRO DE EMPRESA"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand" />
+            <Image Source="empresa.jpg"
+                   HeightRequest="300"></Image>
+            <Entry Grid.Row="1"
+                   Placeholder="Ingrese RUC"
+                   Margin="20"
+                   x:Name="ruc" />
+            <Entry Grid.Row="1"
+                   Placeholder="Razon Social"
+                   Margin="20"
+                   x:Name="razon_social" />
+            <Entry Grid.Row="1"
+                   Placeholder="Dirección"
+                   Margin="20"
+                   x:Name="direccion" />
+            <Entry Grid.Row="1"
+                   Placeholder="Ubicación GPS"
+                   Margin="20"
+                   x:Name="ubicacion" />
+            <Entry Grid.Row="1"
+                   Placeholder="Imagen Empresa"
+                   Margin="20"
+                   x:Name="foto_empresa" />
+            <Entry Grid.Row="1"
+                   Placeholder="Subir Brochure o Catalogo (URL)"
+                   Margin="20"
+                   x:Name="catalogo" />
+            <Entry Grid.Row="1"
+                   Placeholder="Celular"
+                   Margin="20"
+                   x:Name="celular" />
+            <Entry Grid.Row="1"
+                   Placeholder="Telefóno"
+                   Margin="20"
+                   x:Name="telefono" />
+            <Entry Grid.Row="1"
+                   Placeholder="Pagina Web"
+                   Margin="20"
+                   x:Name="pagina_web" />
+            <Entry Grid.Row="1"
+                   Placeholder="Facebook"
+                   Margin="20"
+                   x:Name="facebook" />
+            <Entry Grid.Row="1"
+                   Placeholder="Instagram"
+                   Margin="20"
+                   x:Name="instagram" />
+            <Entry Grid.Row="1"
+                   Placeholder="Whatsap"
+                   Margin="20"
+                   x:Name="whatsap" />
+            <Entry Grid.Row="1"
+                   Placeholder="Otras Redes Sociales"
+                   Margin="20"
+                   x:Name="otrasR" />
+            <Button Grid.Row="7"
+                    Text="Guardar"
+                    BackgroundColor="LimeGreen"
+                    TextColor="White"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="20"
+                    x:Name="registrar_tienda"
+                    Clicked="registrar_tienda_Clicked" />
+            <!--</Grid>-->
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

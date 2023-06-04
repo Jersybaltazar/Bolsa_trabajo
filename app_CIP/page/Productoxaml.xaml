@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.Productoxaml">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Productos"
+                   FontSize="Title"
+                   HorizontalOptions="CenterAndExpand" />
+            <Button Text="Agregar"
+                    Margin="20"
+                    Clicked="Button_Clicked"/>
+            <StackLayout Margin="20">
+                <SearchBar Placeholder="Buscar Productos" />
+            </StackLayout>
+            <ListView x:Name="lista_productoo"
+                      HasUnevenRows="True"
+                      ItemSelected="lista_productoo_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal"
+                                         Padding="10">
+                                <Label Text="{Binding nombre}"
+                                       FontSize="24"
+                                       FontAttributes="Bold" />
+                                <StackLayout Margin="10,0,0,0">
+                                    <Image Source="{Binding imagen}"
+                                           WidthRequest="200"
+                                           HeightRequest="150" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

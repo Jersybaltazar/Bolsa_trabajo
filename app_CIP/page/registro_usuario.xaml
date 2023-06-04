@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.registro_usuario">
+    <ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand"
+                     Spacing="20"
+                     Margin="40">
+            <Label Text="Registro de Usuario"
+                   FontSize="Large"
+                   FontAttributes="None"
+                   HorizontalTextAlignment="Center"
+                   />
+            <ImageButton HeightRequest="200"
+                         WidthRequest="200"
+                         Aspect="AspectFit"
+                         BackgroundColor="WhiteSmoke"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         BorderColor="Transparent"
+                         x:Name="imagenCIP"
+                         Clicked="registrarFoto_Clicked"></ImageButton>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         Spacing="40">
+                <ImageButton Source="camara.png"
+                             WidthRequest="50" />
+                <ImageButton Source="galeria.png"
+                             WidthRequest="50" />
+            </StackLayout>
+            <Entry Placeholder="DNI"
+                   Keyboard="Numeric"
+                   x:Name="dni"
+                   MaxLength="8" />
+            <Entry Placeholder="Nombre"
+                   x:Name="nombre" />
+            <Entry Placeholder="Apellido"
+                   x:Name="apellido" />
+            <Entry Placeholder="Direccion"
+                   x:Name="direccion" />
+            <Entry Placeholder="Correo 1"
+                   Keyboard="Email"
+                   x:Name="correo" />
+            <Entry Placeholder="Correo 2"
+                   Keyboard="Email"
+                   x:Name="correo2" />
+            <Entry Placeholder="Celular 1"
+                   Keyboard="Numeric"
+                   x:Name="telefono"
+                   MaxLength="9" />
+            <Entry Placeholder="Celular 2"
+                   Keyboard="Numeric"
+                   x:Name="telefono1"
+                   MaxLength="9" />
+            <Label Text="Seleccione el sexo:" />
+            <StackLayout Orientation="Horizontal">
+                <RadioButton  IsChecked="True"
+                              CheckedChanged="RadioButton_CheckedChanged"
+                              x:Name="masculino" />
+                <Label Text="Masculino" />
+                <RadioButton CheckedChanged="RadioButton_CheckedChanged" />
+                <Label Text="Femenino" />
+            </StackLayout>
+            <Label Text="Ingrese la Fecha Nacimiento" />
+            <DatePicker Format="dd/MM/yyyy"
+                        x:Name="fecha_nacimiento" />
+            <Label Text="¿Usted es Padre o Madre?" />
+            <StackLayout Orientation="Horizontal">
+                <RadioButton  IsChecked="True"
+                              CheckedChanged="paternidad_CheckedChanged"
+                              x:Name="SI" />
+                <Label Text="SI" />
+                <RadioButton CheckedChanged="paternidad_CheckedChanged" />
+                <Label Text="NO" />
+            </StackLayout>
+            <Label Text="* Con fines de saludos conmemorativos" />
+            <StackLayout>
+                <Picker x:Name="universiadad"
+                        Title="Universidad Procedencia"
+                        SelectedIndexChanged="universiadad_SelectedIndexChanged">
+                    <Picker.ItemDisplayBinding>
+                        <Binding Path="nombre_uni" />
+                    </Picker.ItemDisplayBinding>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton  IsChecked="True"
+                              CheckedChanged="tipoColegiado_CheckedChanged"
+                              x:Name="Colegiado" />
+                <Label Text="Colegiado" />
+                <RadioButton CheckedChanged="tipoColegiado_CheckedChanged" />
+                <Label Text="No Colegiado" />
+            </StackLayout>
+            <Entry Placeholder="Codigo de CIP"
+                   Keyboard="Numeric"
+                   x:Name="registro_cip" />
+            <StackLayout>
+                <Picker x:Name="capitulo"
+                        Title="Capitulo">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>INDUSTRIAL Y AFINES</x:String>
+                            <x:String>OTROS</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                    <Picker.SelectedItem>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="INDUSTRIA Y AFINES"
+                                Value="Opción 1" />
+                            <On Platform="otros"
+                                Value="Opción 2" />
+                        </OnPlatform>
+                    </Picker.SelectedItem>
+                </Picker>
+            </StackLayout>
+            <Entry Placeholder="Contraseña"
+                   x:Name="password" />
+            <Entry Placeholder="Confirme Contraseña"
+                   x:Name="passwordConfirm"
+                   Unfocused="passwordConfirm_Unfocused" />
+            <Editor Placeholder="Presentación"
+                    AutoSize="Disabled"
+                    HeightRequest="120"
+                    Margin="0,0"
+                    x:Name="presentacion" />
+            <StackLayout>
+                <Picker x:Name="g_academico"
+                        Title="Grado Academico"
+                        SelectedIndexChanged="g_academico_SelectedIndexChanged">
+                    <Picker.ItemDisplayBinding>
+                        <Binding Path="nombre" />
+                    </Picker.ItemDisplayBinding>
+                </Picker>
+            </StackLayout>
+            <StackLayout>
+                <Picker x:Name="especialidad"
+                        Title="SELECIONE SU ESPECIALIDAD"
+                        SelectedIndexChanged="especialidad_SelectedIndexChanged">
+                    <Picker.ItemDisplayBinding>
+                        <Binding Path="nombre_especialidad" />
+                    </Picker.ItemDisplayBinding>
+                </Picker>
+                <Entry x:Name="otrosEntry"
+                       Placeholder="Especificar otra especialidad"
+                       IsEnabled="False"
+                       IsVisible="false" />
+                <Button Text="Agregar"
+                        x:Name="boton_otros"
+                        Clicked="boton_otros_Clicked"
+                        BackgroundColor="Gray"
+                        TextColor="White"
+                        HorizontalOptions="EndAndExpand"
+                        WidthRequest="100"
+                        IsEnabled="False"
+                        IsVisible="false" />
+            </StackLayout>
+            <!-- inicio de la caja que almacena toda las especialidades del susuario-->
+            <StackLayout BackgroundColor="Black"
+                         Padding="5">
+                <ListView x:Name="MiLista"
+                          BackgroundColor="White"
+                          Margin="0,5,0,0"
+                          HeightRequest="200">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="FillAndExpand"
+                                             VerticalOptions="Center"
+                                             Padding="10">
+                                    <Label Text="{Binding}"
+                                           HorizontalOptions="StartAndExpand"
+                                           VerticalOptions="Center" />
+                                    <Button Text="X"
+                                            BackgroundColor="Red"
+                                            TextColor="Black"
+                                            WidthRequest="50"
+                                            HorizontalOptions="End"
+                                            VerticalOptions="Center"
+                                            Clicked="btn_eliminar_Clicked"
+                                            CommandParameter="{Binding .}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <!-- fin de la caja que almacena toda las especialidades del susuario-->
+            <StackLayout>
+                <Label Text="Experiencia:" />
+                <Slider Maximum="2"
+                        Minimum="0"
+                        BackgroundColor="LightGray"
+                        ThumbColor="DarkGray"
+                        x:Name="linea_ex"
+                        ValueChanged="linea_ex_ValueChanged_1" />
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="Center">
+                    <Label Text="0-2 años"
+                           HorizontalOptions="StartAndExpand" />
+                    <Label Text="3-6 años"
+                           HorizontalOptions="CenterAndExpand" />
+                    <Label Text="6+ años"
+                           HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+            </StackLayout>
+            <!--<Button Text=" ver data" Clicked="ver_que_Clicked" x:Name="ver_que"/>-->
+            <Entry Placeholder="Ingrese la URL de su CV"
+                   x:Name="CV" />
+            <StackLayout>
+                <Label Text="Me encuentro en:"
+                       FontSize="Medium" />
+                <RadioButton x:Name="busqueda_laboral"
+                             Content="Busqueda de oportunidad laboral"
+                             TextColor="DarkGray"
+                             CheckedChanged="busqueda_laboral_CheckedChanged" />
+                <RadioButton x:Name="disponible_laboral"
+                             Content="Disponible como Freelancer - Independiente"
+                             TextColor="DarkGray"
+                             CheckedChanged="busqueda_laboral_CheckedChanged" />
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Autorizacion:"
+                       FontSize="Medium" />
+                <RadioButton x:Name="autorizo"
+                             Content="Autorizo, que mis datos personales se muestren en la lista de busqueda profesional"
+                             FontSize="Small"
+                             TextColor="DarkGray"
+                             CheckedChanged="autorizo_CheckedChanged" />
+                <RadioButton x:Name="noautorizo"
+                             Content="No autorizo"
+                             TextColor="DarkGray"
+                             FontSize="Small"
+                             CheckedChanged="autorizo_CheckedChanged" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center">
+                <CheckBox x:Name="PoliticaPriacidad"
+                          CheckedChanged="PoliticaPriacidad_CheckedChanged" />
+                <Label Text="Politicas de privacidad"
+                       FontSize="Medium"
+                       TextColor="Blue"
+                       TextDecorations="Underline" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Spacing="50"
+                         Padding="0,0,0,80">
+                <Button Text="Registrar"
+                        FontAttributes="None"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                        x:Name="btnregistrar_usuario"
+                        Clicked="registrar_usuario_Clicked"
+                        IsEnabled="False">
+                    <Button.Triggers>
+                        <Trigger TargetType="Button"
+                                 Property="IsEnabled"
+                                 Value="False">
+                            <Setter Property="BackgroundColor"
+                                    Value="Gray" />
+                            <Setter Property="TextColor"
+                                    Value="Black" />
+                        </Trigger>
+                        <Trigger TargetType="Button"
+                                 Property="IsEnabled"
+                                 Value="True">
+                            <Setter Property="BackgroundColor"
+                                    Value="Green" />
+                            <Setter Property="TextColor"
+                                    Value="White" />
+                        </Trigger>
+                    </Button.Triggers>
+                </Button>
+                <Button Text="Cancelar"
+                        FontAttributes="None"
+                        FontSize="Small"
+                        Background="#058581"
+                        TextColor="White" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

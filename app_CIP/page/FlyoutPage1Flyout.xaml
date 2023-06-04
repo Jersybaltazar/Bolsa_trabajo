@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.FlyoutPage1Flyout"
+             Title="Flyout"
+             
+             >
+    <ScrollView>
+        <StackLayout>
+            <ListView x:Name="MenuItemsListView"
+                      SeparatorVisibility="None"
+                      HasUnevenRows="true"
+                      ItemsSource="{Binding MenuItems}"
+                      ItemSelected="OnMenuItemSelected">
+                <ListView.Header>
+                    <AbsoluteLayout HorizontalOptions="Center">
+                        <Image Source="panelcapitulo.jpg"
+                               Aspect="AspectFill"
+                               HeightRequest="210" />
+                        <BoxView BackgroundColor="Black"
+                                 Opacity="0.3"
+                                 AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                 AbsoluteLayout.LayoutFlags="All" />
+                    </AbsoluteLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10,10"
+                                         HorizontalOptions="FillAndExpand">
+                                
+                                <Label VerticalOptions="FillAndExpand"
+                                       VerticalTextAlignment="Center"
+                                       Text="{Binding Title}"
+                                       FontSize="18" 
+                                       TextColor="Black"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+ 
+</ContentPage>

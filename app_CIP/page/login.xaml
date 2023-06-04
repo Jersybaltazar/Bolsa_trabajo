@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.login"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <Grid>
+            <StackLayout  VerticalOptions="Center"
+                          Margin="20">
+                <Image Source="panelcapitulo.jpg"
+                       Margin="20" />
+                <StackLayout Margin="20,10">
+                    <Entry Keyboard="Numeric"
+                           Placeholder="Usuario"
+                           FontSize="Medium"
+                           HorizontalTextAlignment="Center"
+                           WidthRequest="200"
+                           x:Name="usuario"/>
+                    <Entry Keyboard="Chat"
+                           Placeholder="Contraseña"
+                           FontSize="Medium"
+                           HorizontalTextAlignment="Center"
+                           IsPassword="True"
+                           x:Name="password"/>
+                    <Button Text="Olvidaste tu Contraseña"
+                           FontSize="Small"
+                           BackgroundColor="Transparent"
+                           Margin="20,20,20,10"
+                           TextColor="Blue"
+                          Clicked="Button_Clicked_1"
+                           />
+                    <Button Text="Ingresar"
+                            CornerRadius="10"
+                            FontAttributes="None"
+                            FontSize="Medium"
+                            Margin="0,20,0,0" 
+                            Clicked="Button_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

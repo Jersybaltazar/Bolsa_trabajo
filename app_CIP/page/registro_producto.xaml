@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.registro_producto">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="REGISTRO PRODUCTO"
+                   HorizontalOptions="Center"
+                   FontSize="20" />
+            <Entry Placeholder="Nombre de producto"
+                   Keyboard="Text"
+                   x:Name="nombre_producto" />
+            <Entry Placeholder="Precio"
+                   Keyboard="Text"
+                   x:Name="precio" />
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center">
+                <CheckBox x:Name="miCheckBox" />
+                <Label Text="Publicar precio"
+                       VerticalOptions="Center"
+                       FontSize="15" />
+            </StackLayout>
+            <Label Text="Descuentos para usuarios registrados:" />
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center">
+                <RadioButton x:Name="radioButtonSi" />
+                <Label Text="Si"
+                       VerticalOptions="Center"
+                       FontSize="15" />
+                <RadioButton x:Name="radioButtonNo" />
+                <Label Text="No"
+                       VerticalOptions="Center"
+                       FontSize="15" />
+            </StackLayout>
+            <Entry Placeholder="0%"
+                   Keyboard="Numeric"
+                   x:Name="porcentaje" />
+            <Entry Placeholder="Descripción corta:"
+                   Keyboard="Text"
+                   x:Name="descripcion_corta" />
+            <Frame Padding="50"
+                   CornerRadius="5"
+                   BorderColor="Gray"
+                   BackgroundColor="White"
+                   Margin="7,10">
+                <Entry Placeholder="Descripción detalla del producto:"
+                       Keyboard="Text"
+                       x:Name="descripcion_larga" />
+            </Frame>
+            <Entry Placeholder="URL Imagen"
+                   Keyboard="Url"
+                   x:Name="link" />
+            <Label Text="¿Incluye delivery?" />
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center">
+                <RadioButton x:Name="Si_delivery" />
+                <Label Text="Si"
+                       VerticalOptions="Center"
+                       FontSize="15" />
+                <RadioButton x:Name="No_delivery" />
+                <Label Text="No"
+                       VerticalOptions="Center"
+                       FontSize="15" />
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Button Text="ELIMINAR"
+                        x:Name="button_eliminar" />
+                <Button Text="GUARDAR"
+                        x:Name="button_guardar"
+                        Clicked="button_guardar_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

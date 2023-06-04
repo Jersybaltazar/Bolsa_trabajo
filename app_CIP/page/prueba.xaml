@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.prueba"
+             NavigationPage.HasNavigationBar="True">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="CUMPLEAÑOS:"/>
+            <ListView x:Name="cumpleListView"
+                      SelectionMode="None"
+                      HasUnevenRows="True"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="20" BorderColor="Black" CornerRadius="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout >
+                                        <Image Source="{Binding Imagen}" x:Name="colaborador"
+                                               HeightRequest="100" Aspect="AspectFill" />
+                                    </StackLayout>
+                                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                        <Label Text="{Binding nombre_usuario}" HorizontalTextAlignment="Center" FontSize="16" TextColor="Black"/>
+                                        <Label Text="{Binding f_nacimiento}" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </ScrollView>
+</ContentPage>

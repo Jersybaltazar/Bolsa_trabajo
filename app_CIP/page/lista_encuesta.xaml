@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.lista_encuesta">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout >
+                <Label Text="ENCUESTAS"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand" />
+                <ListView x:Name="encuestaListView"
+                          SelectionMode="None"
+                          HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BackgroundColor="LightGray"
+                                       
+                                       >
+                                    <StackLayout>
+                                        <Label Text="PUBLICACIÓN:"
+                                               FontSize="16"
+                                               FontAttributes="Bold"
+                                               TextColor="Black" />
+                                        <Label Text="{Binding nombre_usuario}"
+                                               FontSize="16"
+                                               TextColor="Black" />
+                                        <Label Text="Link de la encuesta"
+                                               FontSize="16"
+                                               FontAttributes="Bold"
+                                               TextColor="Black"/>
+                                        <Label Text="{Binding link}"
+                                               FontSize="16"
+                                               TextColor="Blue"
+                                               >
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="OnLabelTapped" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+               
+            </StackLayout>
+            
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

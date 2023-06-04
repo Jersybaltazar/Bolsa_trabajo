@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.registrar_eventos_programados">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="EVENTOS PROGRAMADOS"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   Margin="20" />
+            <Entry x:Name="tituloText"
+                   Placeholder="Ingrese el tirtulo del evento"
+                   Keyboard="Text" />
+            <Entry x:Name="linkText"
+                   Placeholder="Ingrese la url de la imagen"
+                   Keyboard="Url" />
+            <Picker x:Name="comboBox">
+                <Picker.Title>Seleccione una opción</Picker.Title>
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>VIRTUAL</x:String>
+                        <x:String>PRECENSIAL</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Ingrese fecha:"
+                       FontSize="Medium"
+                       VerticalOptions="Center" />
+                <DatePicker Format="dd/MM/yyyy"
+                            MaximumDate="{Binding MaximumDate}"
+                            MinimumDate="{Binding MinimumDate}"
+                            Date="{Binding SelectedDate}"
+                            VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Ingrese hora:"
+                       FontSize="Medium"
+                       VerticalOptions="Center" />
+                <TimePicker Time="15:00"
+                            x:Name="timePicker" />
+            </StackLayout>
+            <Entry x:Name="direccionText"
+                   Placeholder="Ingrese la dirección"
+                   Keyboard="Text" />
+            <Button x:Name="guardar"
+                    Text="guardar"
+                    Clicked="guardar_eventoClicked"
+                    HorizontalOptions="Center" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

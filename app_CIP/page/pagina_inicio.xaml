@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.pagina_inicio"
+             NavigationPage.HasNavigationBar="True">
+    <StackLayout VerticalOptions="Center">
+        <StackLayout>
+            <Image Source="logocapitulo.jpg"
+                   HeightRequest="200" />
+            <StackLayout Padding="80,20"
+                         Spacing="30">
+                <Button Text="Iniciar Sesión"
+                        TextTransform="None"
+                        CornerRadius="10" 
+                        Clicked="Button_Clicked"/>
+                <Button Text="Registrarse"
+                        TextTransform="None"
+                        CornerRadius="10" 
+                        Clicked="Button_Clicked_1"
+                        />
+                <Button Text="Invitado"
+                        TextTransform="None"
+                        CornerRadius="10"
+                        Clicked="Button_Clicked_2"/>
+            </StackLayout>
+            <Label Text="Powered by KSOFT"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextTransform="None" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

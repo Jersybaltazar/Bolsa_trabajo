@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app_CIP.page.junta_directiva">
+    <ScrollView>
+        <StackLayout Margin="30">
+            <Label Text="JUNTA DIRECTIVA 2022-2024"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+            <Frame Margin="0,10,0,0">
+                <StackLayout Padding="10">
+                    <Grid>
+                        <Image Source="imagen1.png"
+                               Grid.Column="0"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent" />
+                        <StackLayout Grid.Column="1">
+                            <Label Text="PRESIDENTE DEL CAPITULO"
+                                   FontSize="Title"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="ING. DENNIS ALFREDO ROMERO ROJAS"
+                                   FontSize="Subtitle"
+                                   HorizontalTextAlignment="Center" />
+                            <Grid>
+                                <ImageButton Source="logowsppng.png"
+                                             Grid.Column="0"
+                                             WidthRequest="50"
+                                             HeightRequest="50"
+                                             BackgroundColor="Transparent" />
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <Line BackgroundColor="#4F6F30"></Line>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Image Source="imagen2.png"
+                               Grid.Column="1"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent" />
+                        <StackLayout Grid.Column="0">
+                            <Label Text="VICEPRESIDENTA"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="ING.CELIA GUTIÉRREZ FRANCO"
+                                   FontSize="Subtitle"
+                                   HorizontalTextAlignment="Center" />
+                            <Grid>
+                                <ImageButton Source="logowsppng.png"
+                                             Grid.Column="0"
+                                             WidthRequest="50"
+                                             HeightRequest="50"
+                                             BackgroundColor="Transparent" />
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <Line BackgroundColor="#4F6F30"></Line>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Image Source="imagen3.png"
+                               Grid.Column="0"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent" />
+                        <StackLayout Grid.Column="1">
+                            <Label Text="SECRETARIA"
+                                   FontSize="Title"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="ING. EVELYN JANNETH VILLEGASVILLANUEVA"
+                                   FontSize="Subtitle"
+                                   HorizontalTextAlignment="Center" />
+                            <Grid>
+                                <ImageButton Source="logowsppng.png"
+                                             Grid.Column="0"
+                                             WidthRequest="50"
+                                             HeightRequest="50"
+                                             BackgroundColor="Transparent" />
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <Line BackgroundColor="#4F6F30"></Line>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Image Source="imagen4.png"
+                               Grid.Column="1"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent" />
+                        <StackLayout Grid.Column="0">
+                            <Label Text="PROSECRETARIO"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="ING.ALINA MARISEL MALLQUI VICTORIO"
+                                   FontSize="Subtitle"
+                                   HorizontalTextAlignment="Center" />
+                            <Grid>
+                                <ImageButton Source="logowsppng.png"
+                                             Grid.Column="0"
+                                             WidthRequest="50"
+                                             HeightRequest="50"
+                                             BackgroundColor="Transparent" />
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <Line BackgroundColor="#4F6F30"></Line>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Image Source="imagen5.png"
+                               Grid.Column="0"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent" />
+                        <StackLayout Grid.Column="1">
+                            <Label Text="VOCAL"
+                                   FontSize="Title"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="ING.DORIS PATRICIA FELIPE MATÍAS"
+                                   FontSize="Subtitle"
+                                   HorizontalTextAlignment="Center" />
+                            <Grid>
+                                <ImageButton Source="logowsppng.png"
+                                             Grid.Column="0"
+                                             WidthRequest="50"
+                                             HeightRequest="50"
+                                             BackgroundColor="Transparent" />
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <Line BackgroundColor="#4F6F30"></Line>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Image Source="imagen6.png"
+                               Grid.Column="1"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent" />
+                        <StackLayout Grid.Column="0">
+                            <Label Text="VOCAL"
+                                   FontSize="Title"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="ING.BLADIMIR LAZARO NACION ALBINO"
+                                   FontSize="Subtitle"
+                                   HorizontalTextAlignment="Center" />
+                            <Grid>
+                                <ImageButton Source="logowsppng.png"
+                                             Grid.Column="0"
+                                             WidthRequest="50"
+                                             HeightRequest="50"
+                                             BackgroundColor="Transparent" />
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <Line BackgroundColor="#4F6F30"></Line>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Image Source="imagen7.png"
+                               Grid.Column="0"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent" />
+                        <StackLayout Grid.Column="1">
+                            <Label Text="VOCAL"
+                                   FontSize="Title"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="ING.BLANCA FLOR SIMÓN DÍAZ"
+                                   FontSize="Subtitle"
+                                   HorizontalTextAlignment="Center" />
+                            <Grid>
+                                <ImageButton Source="logowsppng.png"
+                                             Grid.Column="0"
+                                             WidthRequest="50"
+                                             HeightRequest="50"
+                                             BackgroundColor="Transparent" />
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <Line BackgroundColor="#4F6F30"></Line>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Image Source="imagen8.png"
+                               Grid.Column="1"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent" />
+                        <StackLayout Grid.Column="0">
+                            <Label Text="VOCAL"
+                                   FontSize="Title"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="ING. LUCÍA EVELYN BARDALES TRUJILLO"
+                                   FontSize="Subtitle"
+                                   HorizontalTextAlignment="Center" />
+                            <Grid>
+                                <ImageButton Source="logowsppng.png"
+                                             Grid.Column="0"
+                                             WidthRequest="50"
+                                             HeightRequest="50"
+                                             BackgroundColor="Transparent" />
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <Line BackgroundColor="#4F6F30"></Line>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Image Source="imagen9.png"
+                               Grid.Column="0"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent" />
+                        <StackLayout Grid.Column="1">
+                            <Label Text="VOCAL"
+                                   FontSize="Title"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="ING. LUIS MIGUEL CRESPO VIZCARRA"
+                                   FontSize="Subtitle"
+                                   HorizontalTextAlignment="Center" />
+                            <Grid>
+                                <ImageButton Source="logowsppng.png"
+                                             Grid.Column="0"
+                                             WidthRequest="50"
+                                             HeightRequest="50"
+                                             BackgroundColor="Transparent" />
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <Line BackgroundColor="#4F6F30"></Line>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
